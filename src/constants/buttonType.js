@@ -1,7 +1,7 @@
 import colors from './colors';
 import {StyleSheet} from 'react-native';
 
-const buttonSize = StyleSheet.create({
+const buttonType = StyleSheet.create({
   defaultText: {
     color: 'white',
     fontFamily: 'Poppins-Medium',
@@ -352,4 +352,4 @@ const buttonSize = StyleSheet.create({
   },
 });
 
-export default buttonSize;
+export default buttonType;

@@ -25,6 +25,7 @@ const colors = {
   Black_60: '#A0A4A8',
   Black_80: '#52575C',
   Black_100: '#25282B',
+  BackgroundWhite: '#F7F7F7',
 };
 
 export default colors;
