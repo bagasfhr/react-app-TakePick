@@ -68,6 +68,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
   },
+  textContainer: {
+    padding: 8,
+  },
   typeContainer: {
     backgroundColor: colors.Primary_50,
     height: 16,
@@ -83,9 +86,6 @@ const styles = StyleSheet.create({
   },
   dateContainer: {
     marginBottom: 8,
-  },
-  textContainer: {
-    padding: 8,
   },
   titleContainer: {},
   image: {

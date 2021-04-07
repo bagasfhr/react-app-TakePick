@@ -1,13 +1,13 @@
-<!-- Article Card type
+<!-- Product Card type
 
-Article Card
+Product Card
 |
-|____SpecialArticleCard (Extra-Small Card)
+|____SpecialProductCard (Extra-Small Card)
 |       -Flatlist/Carousel horizontal
 |       -Native Size from styles inside
 |
 |
-|____RegularArticleCard (Small, Medium Card & Large Card)
+|____RegularProductCard (Small, Medium Card & Large Card)
 |       -Flatlist/ScrollView Horizontal={true}
 |       -Flatlist 2 row Vertical input parrent style
 |       ---(justifyContent: 'space-between')
@@ -17,7 +17,7 @@ Article Card
 |       -Image size from ('../../../constants/imageSize.js)
 |
 |
-|____ListArticleCard
+|____ListProductCard
 |       -Flatlist 1 row Vertical
         -Flatlist Vertical
         -Native Size from styles inside

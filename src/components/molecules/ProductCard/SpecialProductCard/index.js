@@ -7,6 +7,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors, fonts} from '../../../../constants';
 
 const {width} = Dimensions.get('window');
@@ -14,13 +15,14 @@ const {width} = Dimensions.get('window');
 const images =
   'https://images.unsplash.com/photo-1519741497674-611481863552?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80';
 
-const SpecialArticleCard = ({
+const SpecialProductCard = ({
   image,
   type,
+  rating,
+  city,
+  region,
   title,
-  month,
-  day,
-  year,
+  newPrice,
   onPress,
 }) => {
   return (
@@ -29,17 +31,21 @@ const SpecialArticleCard = ({
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{uri: images}} />
           <View style={styles.typeContainer}>
-            <Text style={styles.typeText}>INSPIRATION</Text>
+            <Text style={styles.typeText}>BEST DEAL</Text>
           </View>
         </View>
         <View style={styles.textContainer}>
-          <View style={styles.dateContainer}>
-            <Text style={styles.dateText}>Sep 20, 2020</Text>
+          <View style={styles.reviewLocationContainer}>
+            <Icon name="star" size={16} color={colors.Primary_10} />
+            <Text style={styles.reviewLocationText}>4.73</Text>
+
+            <Text style={styles.reviewLocationText}>| Bali, ID</Text>
           </View>
           <View style={styles.titleContainer}>
-            <Text style={styles.titleText} numberOfLines={4}>
-              Inspirasi Pernikahan di Bawah budget Rp 50 Juta: Classy Intimate
+            <Text style={styles.titleText} numberOfLines={3}>
+              Package Engagement Photo & Video
             </Text>
+            <Text style={styles.newPriceText}>IDR 5.087.500</Text>
           </View>
         </View>
       </View>
@@ -47,7 +53,7 @@ const SpecialArticleCard = ({
   );
 };
 
-export default SpecialArticleCard;
+export default SpecialProductCard;
 
 const styles = StyleSheet.create({
   container: {
@@ -73,7 +79,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 128 - 16,
   },
-  dateContainer: {
+  reviewLocationContainer: {
+    flexDirection: 'row',
     marginBottom: 4,
   },
   titleContainer: {},
@@ -87,22 +94,27 @@ const styles = StyleSheet.create({
     fontFamily: fonts.poppinsMedium,
     fontSize: 12,
     color: colors.Black_5,
-    // color: colors.Black_100,
     lineHeight: 16.8,
     letterSpacing: 1,
   },
-  dateText: {
+  reviewLocationText: {
     fontFamily: fonts.robotoRegular,
     fontSize: 12,
-    fontStyle: 'italic',
     color: colors.Black_100,
     lineHeight: 16.8,
+    letterSpacing: 0.5,
+    marginLeft: 4,
   },
   titleText: {
     fontFamily: fonts.poppinsRegular,
-    fontSize: 14,
-    lineHeight: 19.6,
+    fontSize: 12,
+    lineHeight: 16.8,
     color: colors.Black_100,
-    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  newPriceText: {
+    fontFamily: fonts.robotoBold,
+    fontSize: 12,
+    letterSpacing: 1,
   },
 });
