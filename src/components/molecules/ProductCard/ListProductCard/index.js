@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {},
   textContainer: {
+    flex: 1,
     flexShrink: 2,
     paddingHorizontal: 8,
   },
