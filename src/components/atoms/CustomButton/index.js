@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, TouchableOpacity} from 'react-native';
+import {colors, fonts, buttonType} from '../../../constants';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const CustomButton = ({

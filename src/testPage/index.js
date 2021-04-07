@@ -15,6 +15,8 @@ import {
   RegularVendorCard,
   SpecialVendorCard,
 } from '../components/molecules/VendorCard';
+import ListWishlistCard from '../components/molecules/WishlistCard/ListWishlistPage';
+
 import SeeAllCard from '../components/molecules/SeeAllCard';
 import {cardSize, imageSize, colors} from '../constants';
 
@@ -22,6 +24,16 @@ const TestPage = () => {
   return (
     <View style={{backgroundColor: colors.Black_5}}>
       <ScrollView>
+        <View>
+          <Text
+            style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
+            ---Wishlist Card---
+          </Text>
+          <View style={{paddingHorizontal: 8}}>
+            <ListWishlistCard />
+            <ListWishlistCard />
+          </View>
+        </View>
         <View>
           <Text
             style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
