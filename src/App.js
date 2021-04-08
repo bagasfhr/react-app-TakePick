@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
-import TestPage from './../src/TestPage';
+import TestPage from './../src/testPage';
 
 const App = () => {
   return (
