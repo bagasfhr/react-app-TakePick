@@ -2,12 +2,12 @@
 
 WIshlist Card
 |
-|____SpecialWIshlistCard (Extra-Small Card)
+|____SpecialWishlistCard (Extra-Small Card)
 |       -Flatlist/Carousel horizontal
 |       -Native Size from styles inside
 |
 |
-|____RegularWIshlistCard (Small, Medium Card & Large Card)
+|____RegularWishlistCard (Small, Medium Card & Large Card)
 |       -Flatlist/ScrollView Horizontal={true}
 |       -Flatlist 2 row Vertical input parrent style
 |       ---(justifyContent: 'space-between')
@@ -17,7 +17,7 @@ WIshlist Card
 |       -Image size from ('../../../constants/imageSize.js)
 |
 |
-|____ListWIshlistCard
+|____ListWishlistCard
 |       -Flatlist 1 row Vertical
         -Flatlist Vertical
         -Native Size from styles inside
