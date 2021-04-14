@@ -19,11 +19,21 @@ import ListWishlistCard from '../components/molecules/WishlistCard/ListWishlistP
 
 import SeeAllCard from '../components/molecules/SeeAllCard';
 import {cardSize, imageSize, colors} from '../constants';
+import RegularProjectCard from '../components/molecules/ProjectCard/RegularProjectCard';
 
 const TestPage = () => {
   return (
     <View style={{backgroundColor: colors.Black_5}}>
       <ScrollView>
+        <View>
+          <Text
+            style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
+            ---Project Card---
+          </Text>
+          <View style={{paddingHorizontal: 8}}>
+            <RegularProjectCard />
+          </View>
+        </View>
         <View>
           <Text
             style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>

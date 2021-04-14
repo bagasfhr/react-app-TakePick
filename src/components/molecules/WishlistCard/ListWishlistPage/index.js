@@ -8,9 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {colors, fonts, buttonType} from '../../../../constants';
-import {Coupon16} from '../../../../assets/icons';
-import CustomButton from '../../../atoms/CustomButton';
+import {colors, fonts} from '../../../../constants';
 
 const {width} = Dimensions.get('window');
 
@@ -47,21 +45,29 @@ const ListWishlistCard = ({
             <Text style={styles.reviewLocationText}>(21)</Text>
             <Text style={styles.reviewLocationText}>| Bali, ID</Text>
           </View>
-          <View style={styles.oldPriceContainer}>
+          {/* <View style={styles.oldPriceContainer}>
             <Image source={Coupon16} />
             <Text style={styles.oldPriceText}>IDR 5.587.500</Text>
-          </View>
+          </View> */}
           <Text style={styles.newPriceText}>IDR 5.087.500</Text>
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <View style={styles.buttonCheckContainer}>
-          <Icon name="plus" size={24} color={colors.Primary_70} />
-          <Text style={styles.buttonCheck}>Check availibility</Text>
-        </View>
-        <View style={styles.buttonDeleteContainer}>
-          <Icon name="delete-outline" size={24} color={colors.Black_80} />
-        </View>
+        <TouchableOpacity
+          onpress={onPressCheck}
+          style={styles.buttonCheckContainer}>
+          <View style={styles.buttonCheck}>
+            <Icon name="plus" size={24} color={colors.Primary_70} />
+            <Text style={styles.buttonCheck}>Check availibility</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={onPressDelete}
+          style={styles.buttonDeleteContainer}>
+          <View>
+            <Icon name="delete-outline" size={24} color={colors.Black_80} />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.Primary_70,
     flexGrow: 1,
-    elevation: 3,
+    // elevation: 3,
   },
   buttonDeleteContainer: {
     padding: 8,
@@ -121,14 +127,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#fff',
     marginLeft: 8,
-    elevation: 10,
+    elevation: 2,
   },
   image: {
-    width: 96,
-    height: 96,
+    width: 90,
+    height: 90,
     borderRadius: 8,
   },
   buttonCheck: {
+    flexDirection: 'row',
     color: colors.Primary_70,
     fontFamily: fonts.poppinsMedium,
     fontSize: 14,
