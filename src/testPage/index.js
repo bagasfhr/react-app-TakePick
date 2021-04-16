@@ -19,6 +19,7 @@ import ListWishlistCard from '../components/molecules/WishlistCard/ListWishlistP
 
 import SeeAllCard from '../components/molecules/SeeAllCard';
 import {cardSize, imageSize, colors} from '../constants';
+import RegularNewsCard from '../components/molecules/NewsCard/RegularNewsCard';
 import RegularProjectCard from '../components/molecules/ProjectCard/RegularProjectCard';
 
 const TestPage = () => {
@@ -30,8 +31,29 @@ const TestPage = () => {
             style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
             ---Project Card---
           </Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              paddingHorizontal: 8,
+            }}>
+            <RegularProjectCard
+              cardSize={cardSize.smallVerticalRegularCard}
+              imageSize={imageSize.smallVerticalRegularImage}
+            />
+            <RegularProjectCard
+              cardSize={cardSize.smallVerticalRegularCard}
+              imageSize={imageSize.smallVerticalRegularImage}
+            />
+          </View>
+        </View>
+        <View>
+          <Text
+            style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
+            ---News Card---
+          </Text>
           <View style={{paddingHorizontal: 8}}>
-            <RegularProjectCard />
+            <RegularNewsCard />
           </View>
         </View>
         <View>
