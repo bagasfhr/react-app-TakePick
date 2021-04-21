@@ -21,6 +21,8 @@ import SeeAllCard from '../components/molecules/SeeAllCard';
 import {cardSize, imageSize, colors} from '../constants';
 import RegularNewsCard from '../components/molecules/NewsCard/RegularNewsCard';
 import RegularProjectCard from '../components/molecules/ProjectCard/RegularProjectCard';
+import SpecialProjectCard from '../components/molecules/ProjectCard/SpecialProjectCard';
+import ListProjectCard from '../components/molecules/ProjectCard/ListProjectCard';
 
 const TestPage = () => {
   return (
@@ -31,6 +33,15 @@ const TestPage = () => {
             style={{justifyContent: 'center', alignSelf: 'center', padding: 8}}>
             ---Project Card---
           </Text>
+          <View style={{paddingHorizontal: 8}}>
+            <ListProjectCard />
+            <ListProjectCard />
+          </View>
+          <ScrollView horizontal style={{flexDirection: 'row'}}>
+            <SpecialProjectCard />
+            <SpecialProjectCard />
+            <SeeAllCard />
+          </ScrollView>
           <View
             style={{
               flexDirection: 'row',

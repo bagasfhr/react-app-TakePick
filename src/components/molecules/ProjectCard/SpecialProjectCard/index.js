@@ -7,7 +7,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors, fonts} from '../../../../constants';
 
 const {width} = Dimensions.get('window');
@@ -15,38 +15,31 @@ const {width} = Dimensions.get('window');
 const images =
   'https://images.unsplash.com/photo-1519741497674-611481863552?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80';
 
-const RegularProjectCard = ({
+const SpecialProjectCard = ({
   image,
   type,
   title,
   vendorName,
   onPress,
   onPressOptions,
-  cardSize,
-  imageSize,
 }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={cardSize}>
+      <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <Image style={imageSize} source={{uri: images}} />
+          <Image style={styles.image} source={{uri: images}} />
           <View style={styles.typeContainer}>
             <Text style={styles.typeText}>TRADITIONAL</Text>
           </View>
         </View>
         <View style={styles.textContainer}>
           <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>Venue Sasana Modern</Text>
-          </View>
-          <View style={styles.vendorNameContainer}>
-            <View style={styles.vendorTextContainer}>
-              <Text style={styles.vendorText} numberOfLines={1}>
-                by SASANA MODERN
-              </Text>
-            </View>
-            <TouchableOpacity onPress={onPressOptions}>
-              <Icon name="dots-horizontal" size={24} color={colors.Black_40} />
-            </TouchableOpacity>
+            <Text style={styles.titleText} numberOfLines={2}>
+              Venue Sasana Modern
+            </Text>
+            <Text style={styles.vendorText} numberOfLines={1}>
+              by SASANA MODERN
+            </Text>
           </View>
         </View>
       </View>
@@ -54,12 +47,20 @@ const RegularProjectCard = ({
   );
 };
 
-export default RegularProjectCard;
+export default SpecialProjectCard;
 
 const styles = StyleSheet.create({
+  container: {
+    width: width / 2 - 64,
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 3,
+    marginLeft: 8,
+    marginBottom: 8,
+  },
   imageContainer: {
     flex: 1,
-    justifyContent: 'flex-end',
   },
   textContainer: {
     padding: 8,
@@ -67,22 +68,17 @@ const styles = StyleSheet.create({
   typeContainer: {
     backgroundColor: colors.Primary_50,
     height: 16,
+    borderTopRightRadius: 4,
     paddingHorizontal: 4,
-    alignSelf: 'flex-start',
-    justifyContent: 'center',
-    borderRadius: 4,
-    marginBottom: 8,
     position: 'absolute',
-    bottom: 1,
-    marginLeft: 8,
+    top: 128 - 16,
   },
-  vendorNameContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  vendorTextContainer: {
-    flexGrow: 1,
-    // maxWidth: '90%',
+  titleContainer: {},
+  image: {
+    width: 'auto',
+    height: 128,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
   },
   typeText: {
     fontFamily: fonts.poppinsMedium,
@@ -96,12 +92,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.Black_100,
     letterSpacing: 0.5,
-    // marginBottom: 8,
   },
   vendorText: {
     fontFamily: fonts.robotoRegular,
     fontSize: 12,
-    letterSpacing: 0.5,
+    letterSpacing: 1,
     lineHeight: 16.8,
     color: colors.Black_100,
     maxWidth: '85%',
