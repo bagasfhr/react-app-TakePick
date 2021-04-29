@@ -15,14 +15,16 @@ import {
   RegularVendorCard,
   SpecialVendorCard,
 } from '../components/molecules/VendorCard';
+import {
+  RegularProjectCard,
+  SpecialProjectCard,
+  ListProjectCard,
+} from '../components/molecules/ProjectCard';
 import ListWishlistCard from '../components/molecules/WishlistCard/ListWishlistPage';
 
 import SeeAllCard from '../components/molecules/SeeAllCard';
 import {cardSize, imageSize, colors} from '../constants';
 import RegularNewsCard from '../components/molecules/NewsCard/RegularNewsCard';
-import RegularProjectCard from '../components/molecules/ProjectCard/RegularProjectCard';
-import SpecialProjectCard from '../components/molecules/ProjectCard/SpecialProjectCard';
-import ListProjectCard from '../components/molecules/ProjectCard/ListProjectCard';
 
 const TestPage = () => {
   return (
